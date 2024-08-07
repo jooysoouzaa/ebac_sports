@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
+
 import carrinhoReducer from './reducers/carrinho'
+import favoritoReducer from './reducers/favoritar'
 import api from '../services/api'
 
 export const store = configureStore({
   reducer: {
     carrinho: carrinhoReducer,
+    favorito: favoritoReducer,
     [api.reducerPath]: api.reducer
   },
   middleware: (getDefaultMiddleware) =>
@@ -12,4 +15,3 @@ export const store = configureStore({
 })
 
 export type RootReducer = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch

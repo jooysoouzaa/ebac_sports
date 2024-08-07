@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
 import { GlobalStyle } from './styles'
-import { store } from './store'
 import { Provider } from 'react-redux'
+import { store } from './store'
+import React from 'react'
 
 export type Produto = {
   id: number
